@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT ME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header1.css">
+
+    <style>
+        /* ABOUT ME SECTION */
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding: 40px 5%;
+            background-image: url('https://lh3.googleusercontent.com/d/1t6-0ipCPeOYOLgGeuX0CoeD8sgVwVS1z');
+            background-size: cover;
+            background-position: center;
+            gap: 30px;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        #about-left {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about-left p {
+            font-size: clamp(2rem, 3vw, 4rem);
+            color: #233947;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        #about-left img {
+            width: 80%;
+            max-width: 280px;
+            height: auto;
+            border-radius: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        #about-left img:hover {
+            transform: scale(1.05);
+        }
+
+        #about-right {
+            flex: 2 1 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #top {
+            padding: 30px;
+            border-radius: 16px;
+            animation: fadeInUp 0.5s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #top:hover {
+            transform: scale(1.015);
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        #top h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #233947;
+        }
+
+        #top p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        #bottom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            transition: 0.5s;
+        }
+
+        #bottom-left,
+        #bottom-right {
+            flex: 1 1 calc(50% - 20px);
+            padding: 25px;
+            border-radius: 16px;
+            background-color: #233947;
+            color: #cfecff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            will-change: transform;
+            transition: 1s;
+        }
+
+        #bottom-left:hover,
+        #bottom-right:hover {
+            transform: scale(1.025);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        #bottom-left h1,
+        #bottom-right h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        #bottom-left p,
+        #bottom-right p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.5s ease forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.5s ease forwards;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+
+        @media (max-width: 900px) {
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #about-right {
+                width: 100%;
+            }
+
+            #bottom {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            #bottom-left,
+            #bottom-right {
+                width: 100%;
+                padding: 18px;
+                transform: none !important;
+
+            }
+
+            #bottom-left:hover,
+            #bottom-right:hover {
+                transform: none;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            #top h1,
+            #bottom-left h1,
+            #bottom-right h1 {
+                font-size: 18px;
+            }
+
+            #top p,
+            #bottom-left p,
+            #bottom-right p {
+                font-size: 13.5px;
+                line-height: 1.5;
+            }
+
+            #bottom-left,
+            #bottom-right {
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+
+            #about-left p {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <div class="header-container">
+        <div id="header-cont">
+            <div id="logo">
+                <a href="index.html"><img src="https://lh3.googleusercontent.com/d/1CLt3DmIJJ_H86nH8QF6COtNXUZ0e2nvs"
+                        alt="G-SERVER ERROR"></a>
+            </div>
+            <div id="header-txt">
+                <p>Hello</p>
+                <h1>I’m Janelle Terez</h1>
+                <p>A college student who studies at <br> Our Lady of Fatima University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION SECTION -->
+    <div id="navigation-container">
+        <div id="nav-cont">
+            <a href="#">
+                <div class="button-nav" style="background-color: #233947;">
+                    <p>ABOUT ME</p>
+                </div>
+            </a>
+            <a href="profile.html">
+                <div class="button-nav">
+                    <p>PROFILE</p>
+                </div>
+            </a>
+            <a href="contacts.html">
+                <div class="button-nav">
+                    <p>CONTACTS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- ABOUT ME SECTION -->
+    <div class="about-content">
+        <div id="about-left">
+            <p>ABOUT ME!</p>
+            <img src="https://lh3.googleusercontent.com/d/1q1Ruf0zfcBpoRUn24uz4GH5WEFTM7iMD" alt="G-SERVER ERROR">
+        </div>
+        <div id="about-right">
+            <div id="top" class="fade-in">
+                <h1>INTRODUCTION</h1>
+                <p>I am Janelle Terez, but my friends call me Jani or Janny. I am 19 years old and was born on December
+                    20, 2005, in Quezon City. I took the STEM program in Senior High at OLFU and am now pursuing a
+                    Bachelor of Science in Information Technology at the same university.</p>
+            </div>
+            <div id="bottom">
+                <div id="bottom-left" class="slide-in-left">
+                    <h1>MISSION</h1>
+                    <p>To graduate smoothly without retaking any subjects, secure a stable job that can provide for my
+                        needs and desires while supporting my parents, and, lastly, to cherish my friends until my last
+                        breath.</p>
+                </div>
+                <div id="bottom-right" class="slide-in-right">
+                    <h1>HOBBIES</h1>
+                    <p>If I have nothing to do, I usually watch fantasy series, sketch, listen to music, scroll online,
+                        or sleep. However, I am especially interested in true crime mysteries and often spend time
+                        searching for or listening to them.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+
+</body>
+
+</html>

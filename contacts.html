@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header1.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+           
+            background-color: #f0f0f0;
+        }
+
+        .profile-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            height: max-content;
+            background-image: url('https://lh3.googleusercontent.com/d/1t6-0ipCPeOYOLgGeuX0CoeD8sgVwVS1z');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            gap: 30px;
+            animation: fadeIn 1s ease;
+            padding-bottom: 100px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .left-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 45%;
+            flex-wrap: wrap;
+            flex-shrink: 1;
+        }
+
+        .left-container img {
+            width: 240px;
+            height: auto;
+            border-radius: 20px;
+            flex-shrink: 0;
+            transition: transform 0.4s ease;
+        }
+
+        .left-container img:hover {
+            transform: scale(1.05);
+        }
+
+        .left-nested {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px;
+            border-radius: 12px;
+        }
+
+        .left-nested h1,
+        .left-nested p,
+        .left-nested a {
+            color: #233947;
+            text-decoration: none;
+        }
+
+        .left-nested p{
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .left-nested h1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .left-nested a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .contact-box {
+            flex: 1 1 45%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: scale(1.03);
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .divider {
+            width: 10px;
+            background-color: white;
+            height: 500px;
+
+        }
+
+        .right-container {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-color: #233947;
+            color: aliceblue;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            height: max-content;
+            animation: fadeIn 1s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .card p {
+            text-align: left;
+            
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h1 {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+
+        @media (max-width: 1024px) {
+            .profile-content {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .left-container,
+            .right-container {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .left-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left-container img {
+                width: 65%;
+                max-width: 280px;
+            }
+
+            .left-nested {
+                align-items: center;
+                text-align: center;
+                width: 90%;
+            }
+
+            .contact-row {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .contact-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 12px;
+            }
+
+            .divider {
+                display: none;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <div class="header-container">
+        <div id="header-cont">
+            <div id="logo">
+                <a href="index.html"><img src="https://lh3.googleusercontent.com/d/1CLt3DmIJJ_H86nH8QF6COtNXUZ0e2nvs"
+                        alt="G-SERVER ERROR"></a>
+            </div>
+            <div id="header-txt">
+                <p>Hello</p>
+                <h1>I’m Janelle Terez</h1>
+                <p>A college student who studies at <br> Our Lady of Fatima University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION SECTION -->
+    <div id="navigation-container">
+        <div id="nav-cont">
+            <a href="about.html">
+                <div class="button-nav">
+                    <p>ABOUT ME</p>
+                </div>
+            </a>
+            <a href="profile.html">
+                <div class="button-nav">
+                    <p>PROFILE</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="button-nav" style="background-color: #233947;">
+                    <p>CONTACTS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACTS ME SECTION -->
+    <div class="profile-content">
+        <div class="left-container">
+            <img src="https://lh3.googleusercontent.com/d/1q1Ruf0zfcBpoRUn24uz4GH5WEFTM7iMD" alt="Profile Picture" />
+
+            <div class="left-nested">
+                <h1>CONTACTS</h1>
+                <p>Email: <a href="mailto:janelleterez90@gmail.com">janelleterez90@gmail.com</a></p>
+                <p>Phone #: <a href="tel:+639476086627">09476086627</a></p>
+
+                <div class="contact-row">
+                    <div class="contact-box">
+                        <div class="icon"
+                            style="background-image: url('https://lh3.googleusercontent.com/d/10SdOHb9QWdsQfs6pKfApxiek3SyI_c6C');">
+                        </div>
+                        <a href="https://instagram.com/Jahny.hao_" target="_blank">Jahny.hao_</a>
+                    </div>
+                    <div class="contact-box">
+                        <div class="icon"
+                            style="background-image: url('https://lh3.googleusercontent.com/d/12dXgIs59hxm9fBcf_fFsfZZj6tQwblGo');">
+                        </div>
+                        <a href="#"
+                            onclick="navigator.clipboard.writeText('Lan_Hua'); alert('Discord username copied!');">Lan_Hua</a>
+                    </div>
+                </div>
+
+                <div class="contact-row">
+                    <div class="contact-box">
+                        <div class="icon"
+                            style="background-image: url('https://lh3.googleusercontent.com/d/1S_HyV0-8Wtig_4z728PuPRo6s6CGMohX');">
+                        </div>
+                        <a href="https://m.me/Janeeel.Terz" target="_blank">Janeeel.Terz</a>
+                    </div>
+                    <div class="contact-box">
+                        <div class="icon"
+                            style="background-image: url('https://lh3.googleusercontent.com/d/1vEcY_YlZW-vSpJqU23Y_bZ-D2N8GTb8P');">
+                        </div>
+                        <a href="https://t.me/JanyHao" target="_blank">JanyHao</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="right-container">
+            <div class="card">
+                <h1>INQUIRY</h1>
+                <p>
+                    With a solid foundation in academic excellence, earned through graduating with honors under the STEM 
+                    strand at Our Lady of Fatima University, and enriched by active participation in research-based competitions such as 
+                    the Physics Fair and creative projects like our award-winning English Week reenactment, I am eager to explore service 
+                    opportunities where I can offer my knowledge, creativity, and dedication. Whether it involves assisting in community 
+                    initiatives, contributing to academic or scientific projects, or supporting collaborative events, I am open to 
+                    opportunities that will allow me to grow, learn, and make a positive impact. 
+                    If you believe my background and passion align with your goals, I would be glad to connect and be of service.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+
+</body>
+
+</html>

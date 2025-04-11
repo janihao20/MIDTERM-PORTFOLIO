@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="header1.css">
+
+    <style>
+        .profile-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            background-image: url('https://lh3.googleusercontent.com/d/1t6-0ipCPeOYOLgGeuX0CoeD8sgVwVS1z');
+            background-size: cover;
+            background-position: center;
+            transition: all 0.6s ease;
+        }
+
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            width: 90%;
+            max-width: 1300px;
+            transition: all 0.6s ease;
+        }
+
+        .univ-gal {
+            border-radius: 16px;
+            padding: 20px;
+            color: #cfecff;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeSlideIn 0.5s ease forwards;
+        }
+
+        .univ-gal1 {
+            border-radius: 16px;
+            padding: 20px;
+            color: #314c5d;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: fadeSlideIn 0.5s ease forwards;
+        }
+
+        .univ-gal:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .univ-gal1:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .univ-gal h1 {
+            font-size: 20px;
+            margin: 15px 0 5px 0;
+        }
+
+        .univ-gal1 h1 {
+            font-size: 20px;
+            margin: 15px 0 5px 0;
+        }
+
+        .univ-gal p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .univ-gal1 p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        .pic-con {
+            width: 100%;
+            height: 180px;
+            background-color: #314c5d;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pic-nested-con {
+            width: 90%;
+            height: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .pic-nested-con img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.5s ease;
+        }
+
+        .pic-nested-con img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeSlideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile-content {
+                padding: 30px 10px;
+            }
+
+            .univ-gal {
+                padding: 15px;
+            }
+
+            .pic-con {
+                height: 160px;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- HEADER SECTION -->
+    <div class="header-container">
+        <div id="header-cont">
+            <div id="logo">
+                <a href="index.html"><img src="https://lh3.googleusercontent.com/d/1CLt3DmIJJ_H86nH8QF6COtNXUZ0e2nvs"
+                        alt="G-SERVER ERROR"></a>
+            </div>
+            <div id="header-txt">
+                <p>Hello</p>
+                <h1>I’m Janelle Terez</h1>
+                <p>A college student who studies at <br> Our Lady of Fatima University</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION SECTION -->
+    <div id="navigation-container">
+        <div id="nav-cont">
+            <a href="about.html">
+                <div class="button-nav">
+                    <p>ABOUT ME</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="button-nav" style="background-color: #233947;">
+                    <p>PROFILE</p>
+                </div>
+            </a>
+            <a href="contacts.html">
+                <div class="button-nav">
+                    <p>CONTACTS</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- PROFILE ME SECTION -->
+    <div class="profile-content">
+        <div id="gallery">
+            <div class="univ-gal">
+                <div class="pic-con">
+                    <div class="pic-nested-con">
+                        <img src="https://lh3.googleusercontent.com/d/1dfYt-77FubYGYn0s623actIM8tv1yGax" alt="G-SERVER ERROR">
+                    </div>
+                </div>
+                <h1>PHYSICS FAIR</h1>
+                <p>Participated in a section-level Physics Fair competition with a project titled Application of Hydromechanics in Deep Water Culture (DWC) 
+                    of Hydroponics System on Lettuce, demonstrating the practical use of physics in sustainable agriculture.
+                </p>
+            </div>
+            <div class="univ-gal1">
+                <div class="pic-con">
+                    <div class="pic-nested-con">
+                        <img src="https://lh3.googleusercontent.com/d/1dY1z1LXhf1avt9llrI4NboVMB-_ozjA7" alt="G-SERVER ERROR">
+                    </div>
+                </div>
+                <h1>English Week: Reenactment</h1>
+                <p>Participated as part of our section in a competition against other sections, reenacting the story Alamat ng Buwan at Bituin, with themed booths that supported 
+                    the performance, where our section was awarded Champion for overall creativity and execution</p>
+            </div>
+            <div class="univ-gal1">
+                <div class="pic-con">
+                    <div class="pic-nested-con">
+                        <img src="https://lh3.googleusercontent.com/d/1dZG5JmQyvhebeIfQcUvzIu9_SA_JwgBM" alt="G-SERVER ERROR">
+                    </div>
+                </div>
+                <h1>Senior High Graduate</h1>
+                <p>Graduated with honors from Our Lady of Fatima University in 2024, 
+                    recognizing consistent academic excellence throughout Senior High School.</p>
+            </div>
+            <div class="univ-gal">
+                <div class="pic-con">
+                    <div class="pic-nested-con">
+                        <img src="https://lh3.googleusercontent.com/d/1daA1fzPk3m1YhHI8XRWQthNNqgeIA6eO" alt="G-SERVER ERROR">
+                    </div>
+                </div>
+                <h1>Moving Up: Grade 11</h1>
+                <p>Moved up to Grade 12 with High Honors under the STEM strand, reflecting 
+                    strong academic achievement.</p>
+            </div>
+        </div>
+
+
+        
+    </div>
+
+    
+
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+
+</body>
+
+</html>

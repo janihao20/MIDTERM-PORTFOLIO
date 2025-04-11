@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Bonheur+Royale&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Creepster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <title>HOME</title>
+</head>
+
+
+<style>
+    /* General styles */
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Arimo", sans-serif;
+    }
+
+    p,
+    h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+    footer {
+        text-align: center;
+        background-color: #233947;
+        color: white;
+        padding: 30px;
+        border-top: white 1px solid;
+        animation: fadeInUp 0.5s ease-in-out;
+        margin-top: auto;
+        width: 100;
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* INDEX HEADER */
+    .index-container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        height: auto;
+        padding: 40px 20px;
+        background-image: url('https://lh3.googleusercontent.com/d/1c_IbAHOAPJq_bmMY6uSvlzA5sctzBxeE');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        animation: fadeInUp 0.5s ease-in-out;
+        gap: 30px;
+    }
+
+    #index-logo {
+        width: 300px;
+        height: 300px;
+        background-image: url('https://lh3.googleusercontent.com/d/1CLt3DmIJJ_H86nH8QF6COtNXUZ0e2nvs');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+    }
+
+    #index-txt {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 600px;
+        color: #233947;
+    }
+
+    #iL1 {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: bold;
+    }
+
+    #iL2 {
+        font-size: clamp(1rem, 5vw, 2rem);
+        font-weight: bold;
+    }
+
+    #iL3 {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+    .index-container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px 20px;
+        animation: fadeInUp 0.5s ease-in-out;
+
+
+    }
+
+    .index-nested-cont2 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .index-but {
+        width: 250px;
+        height: 65px;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        font-weight: bold;
+        background-color: #87c5ee;
+        color: #233947;
+        border-radius: 10px;
+        box-shadow: 0 0 12px #87c5ee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .index-but:hover {
+        scale: 1.05;
+        background-color: #233947;
+        color: #87c5ee;
+        border-radius: 10px;
+        box-shadow: 0 0 20px #233947;
+    }
+
+    @media (max-width: 768px) {
+        #index-logo {
+            width: 200px;
+            height: 200px;
+        }
+
+        .index-but {
+            width: 90%;
+            font-size: clamp(0.95rem, 4vw, 1.1rem);
+        }
+
+        .index-container1 {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #index-txt {
+            align-items: center;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="index-container1">
+        <a href="">
+            <div id="index-logo"></div>
+        </a>
+        <div id="index-txt">
+            <div class="txt-layer" id="iL1">
+                <p>Hello!</p>
+            </div>
+            <div class="txt-layer" id="iL2">
+                <h1>I’m Janelle Terez</h1>
+            </div>
+            <div class="txt-layer" id="iL3">
+                <p>A college student who studies at</p>
+                <p>Our Lady of Fatima University</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="index-container2">
+        <div class="index-nested-cont2">
+            <a href="about.html">
+                <div class="index-but">
+                    <p>About Me</p>
+                </div>
+            </a>
+            <a href="profile.html">
+                <div class="index-but">
+                    <p>Profile</p>
+                </div>
+            </a>
+            <a href="contacts.html">
+                <div class="index-but">
+                    <p>Contacts</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>ALL RIGHTS RESERVED 2025</p>
+    </footer>
+
+</body>
+
+</html>
